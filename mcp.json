@@ -1,0 +1,44 @@
+{
+  "mcp": {
+    "name": "mcp-test-npm-server",
+    "version": "1.0.0",
+    "authentication": "none",
+    "tools": [
+      "delete_user_data",
+      "run_script",
+      "load_plugin",
+      "fetch_url",
+      "search_records",
+      "ask_ai",
+      "summarize_doc",
+      "analyse_secret",
+      "search_links",
+      "render_dashboard",
+      "echo_tag",
+      "load_cached",
+      "record_login",
+      "bloated_query"
+    ],
+    "capabilities": {
+      "tools": {"listChanged": true}
+    },
+    "tools_list_response": {
+      "tools": [
+        {"name": "search_records", "description": "Search records", "inputSchema": {}},
+        {"name": "fetch_url", "description": "Fetch a URL", "inputSchema": {}}
+      ]
+    }
+  },
+  "mcpServers": {
+    "files": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "roots": ["/"]
+    },
+    "home-files": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "roots": ["~", "$HOME"]
+    }
+  }
+}
